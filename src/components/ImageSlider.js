@@ -42,21 +42,21 @@
 
 // export default ImageSlider;
 
-import React from 'react'
 import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/src/owl.carousel.css';
 import 'react-owl-carousel2/src/owl.theme.default.css';
 import $ from 'jquery';
 
-const ImageSlider = ({slides}) => {
+const ImageSlider = ({sli}) => {
   const options = {
-    items: 1,
+    items: 3,
+    nav: true,
     rewind: true,
     autoplay: true
   };
   return (
     <div className='text-center'>
-        <OwlCarousel options={options}>
+       <OwlCarousel options={options}>
         <div>Item 1</div>
         <div>Item 2</div>
         <div>Item 3</div>
