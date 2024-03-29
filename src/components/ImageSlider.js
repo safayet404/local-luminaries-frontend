@@ -1,14 +1,36 @@
 import Carousel from "nuka-carousel"
-
-const ImageSlider = () => {
+import { CiTwitter, CiFacebook, CiInstagram } from "react-icons/ci";
+const ImageSlider = ({slides}) => {
   return (
-    <div >
-     <Carousel>
-     <p>Jpoasfsed</p>
-     <p>Jpoasfsed</p>
-     <p>Jpoasfsed</p>
-    </Carousel>
-    </div>
+   <Carousel withoutControls wrapAround>
+    {slides.map((slide,index)=>(
+     <div key={index} className="slide">
+     <p className="slideText">{slide.text}</p>
+     <h1 className="slideDesc">{slide.desc}</h1>
+     <img
+       className="slideImage"
+       src={slide.image}
+       alt="banner-im"
+     />
+
+     <div className="socialIcons">
+       <ul>
+         <p>
+           <CiFacebook />
+         </p>
+         <p>
+           <CiTwitter />
+         </p>
+         <p>
+           <CiInstagram />
+         </p>
+       </ul>
+     </div>
+   </div>
+    ))}
+   </Carousel>
+   
+   
   );
 };
 

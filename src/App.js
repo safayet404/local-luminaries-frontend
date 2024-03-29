@@ -3,14 +3,17 @@ import Test from "./components/Test";
 import TopNav from "./components/TopNav";
 import './App.css'
 import HomeBanner from "./components/HomeBanner";
+import Activity from "./components/Activity";
 function App() {
   return (
-    <div>
-
+    <Router>
       <TopNav />
       <HomeBanner />
+
       
-    </div>
+     
+      
+    </Router>
   );
 }
 

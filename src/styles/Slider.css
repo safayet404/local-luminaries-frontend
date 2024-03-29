@@ -1,332 +1,343 @@
 .slide {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .slideImage {
-    width: 100%;
-    height: 800px !important;
-  
-  }
-  
-  .popularContainer {
-    width: 1200px !important;
-    overflow: hidden !important;
-  
-  }
-  
-  .popularSlide {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .popularSlideImage {
-    width: 400px;
-    height: 600px !important;
-    border-radius: 2px !important;
-    padding: 10px !important;
-    transition: transform 0.3s ease-out;
-  
-  }
-  
-  .popularSlideImage:hover {
-  
-    transform: scale(1.1);
-  
-  }
-  
-  .popularPrice {
-    position: absolute;
-    top: 2% !important;
-    left: 5% !important;
-    font-size: 35px !important;
-    font-weight: 600 !important;
-    color: #FCFBFC;
-    font-family: 'Segoe UI', Tahoma
-  }
-  
-  .popularCardOpacity {
-    position: absolute;
-    padding: 20px !important;
-    border-radius: 3px !important;
-    background-color: rgba(255, 255, 255, 0.9);
-    bottom: 50px !important;
-    left: 5% !important;
-    right: 5% !important;
-  }
-  
-  .popularHeading {
-    left: 5% !important;
-    top: 5% !important;
-  }
-  
-  .popularRating {
-    font-size: 50px !important;
-    font-weight: 600;
-  }
-  
-  .popularRatingLength {
-    font-size: 15px !important;
-    font-weight: 600;
-  }
-  
-  .slideText {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    color: #abb9c7
-  }
-  
-  .slideDesc {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 40px;
-    text-transform: uppercase;
-    word-spacing: 5px;
-    letter-spacing: 15px;
-  
-  }
-  
-  .socialIcons {
-    position: absolute;
-    top: 40%;
-    right: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 35px !important;
-  
-  }
-  
-  .socialIcons ul li {
-  
-    padding: 50px !important;
-  
-  
-  
-  }
-  
-  
-  .activitiesContainer {
-    padding-right: 0;
-    padding-left: 0;
-    width: 100%,
-  }
-  
-  .activitiyHeader {
-    text-align: center;
-  
-    margin-top: 20px;
-    text-transform: uppercase;
-    letter-spacing: 4px !important;
-    color: rgb(75, 63, 87);
-  }
-  
-  .activities {
-    display: flex;
-    justify-content: space-between;
-    align-items: center !important;
-    padding: 0px 100px 0px 100px !important;
-    margin-top: 50px !important;
-  
-  
-  }
-  
-  .ActCard {
-    text-align: left;
-    color: white;
-    padding: 20px;
-    background-color: #FCFBFC;
-    border-radius: 10px;
-    max-width: 300px;
-    margin: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    margin-bottom: 20px;
-  
-  }
-  
-  .ActCard:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .ActCard h3 {
-    color: rgb(82, 78, 78);
-    text-transform: uppercase;
-    font-size: 18px;
-    font-family:
-      "Helvetica Neue"
-      Helvetica Arial sans-serif;
-    margin-top: 9px;
-  }
-  
-  .ActCard p {
-    color: rgb(70, 66, 66);
-  
-    font-size: 14px;
-    font-family:
-      "Helvetica Neue"
-      Helvetica Arial sans-serif;
-    margin-top: 9px;
-  }
-  
-  .cardImage {
-    height: 60px !important;
-    width: 60px !important;
-    align-items: left !important;
-  }
-  
-  .destContainer {
-    position: relative;
-  }
-  
-  .destContent {
-    position: absolute;
-    background-color: aqua;
-  }
-  
-  .destHeading {
-    font-size: 35px !important;
-    text-align: center !important;
-    font-weight: 600;
-    font-family:
-      "Montserrat"
-      sans-serif;
-    margin-top: 25px !important;
-  
-  }
-  
-  
-  .subHead {
-    font-size: 18px !important;
-    text-align: center !important;
-    margin-top: 15px !important;
-    margin-bottom: 25px !important;
-    font-family:
-      "Montserrat"
-      sans-serif;
-  }
-  
-  .videoHead {
-    font-size: 25px !important;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Open Sans"
-      sans-serif;
-  }
-  
-  .videoSubHead {
-    font-style: italic;
-    font-weight: 500;
-  }
-  
-  .videoDesc {
-  
-    font-family: "Open Sans"
-      sans-serif;
-    font-size: 15px !important;
-  }
-  
-  .videoBackground {
-    height: 600px !important;
-    margin-top: 40px !important;
-  
-  }
-  
-  .videoContainer {
-    position: relative;
-  
-  }
-  
-  .videoIcons {
-    position: absolute;
-    top: 50% !important;
-    left: 50% !important;
-    color: #2485B0;
-  
-  
-    font-size: 86px !important;
-  }
-  
-  .blogTitle {
-    font-size: 28px !important;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    text-align: left !important;
-  }
-  
-  .blogDesc {
-  
-    text-align: left !important;
-  }
-  
-  .blogBtn {
-  
-    text-align: left !important;
-    color: #d49a06;
-  }
-  
-  
-  .blogImage {
-    position: relative;
-  }
-  
-  .blogOverlay {
-    position: absolute;
-    padding: 5px 10px 0px 10px !important;
-    border-radius: 3px !important;
-    background-color: rgba(255, 255, 255, 0.9);
-    top: 2% !important;
-    left: 5% !important;
-  
-  }
-  
-  
-  .footerBackground {
-    background-color: #2485B0;
-    height: 300px !important;
-    width: 100% !important;
-  }
-  
-  .footerLogo {
-  
-    margin-top: 80px !important;
-  
-  }
-  
-  .footerNav {
-    padding: 20px !important;
-    text-decoration: none !important;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: small;
-  
-  }
-  
-  .footerIcons {
-  
-    color: white;
-    font-size: 40px !important;
-    box-shadow: 0 px 0px 0 rgba(255, 251, 251, 0.2);
-    margin: 30px !important;
-    transition: 0.5s;
-  }
-  
-  .footerIcons:hover {
-    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
-  
-  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideImage {
+  width: 100%;
+  height: 800px !important;
+
+}
+
+.popularContainer {
+  width: 1200px !important;
+  overflow: hidden !important;
+
+}
+
+.popularSlide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.popularSlideImage {
+  width: 400px;
+  height: 600px !important;
+  border-radius: 2px !important;
+  padding: 10px !important;
+  transition: transform 0.3s ease-out;
+
+}
+
+.popularSlideImage:hover {
+
+  transform: scale(1.1);
+
+}
+
+.popularPrice {
+  position: absolute;
+  top: 2% !important;
+  left: 5% !important;
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  color: #FCFBFC;
+  font-family: 'Segoe UI', Tahoma
+}
+
+.popularCardOpacity {
+  position: absolute;
+  padding: 20px !important;
+  border-radius: 3px !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 50px !important;
+  left: 5% !important;
+  right: 5% !important;
+}
+
+.popularHeading {
+  left: 5% !important;
+  top: 5% !important;
+}
+
+.popularRating {
+  font-size: 50px !important;
+  font-weight: 600;
+}
+
+.popularRatingLength {
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+.slideText {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: #abb9c7
+}
+
+.slideDesc {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  letter-spacing: 15px;
+
+}
+
+.socialIcons {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 35px !important;
+}
+
+.socialIcons ul p {
+  padding: 50px !important;
+}
+
+
+.activitiesContainer {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%,
+}
+
+.activitiyHeader {
+  text-align: center;
+
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px !important;
+  color: rgb(75, 63, 87);
+}
+
+.activities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+  padding: 0px 100px 0px 100px !important;
+  margin-top: 50px !important;
+
+
+}
+
+.ActCard {
+  text-align: left;
+  color: white;
+  padding: 20px;
+  background-color: #FCFBFC;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 20px;
+
+}
+
+.ActCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ActCard h3 {
+  color: rgb(82, 78, 78);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family:
+    "Helvetica Neue"
+    Helvetica Arial sans-serif;
+  margin-top: 9px;
+}
+
+.ActCard p {
+  color: rgb(70, 66, 66);
+
+  font-size: 14px;
+  font-family:
+    "Helvetica Neue"
+    Helvetica Arial sans-serif;
+  margin-top: 9px;
+}
+
+.cardImage {
+  height: 60px !important;
+  width: 60px !important;
+  align-items: left !important;
+}
+
+.destContainer {
+  position: relative;
+}
+
+.destContent {
+  position: absolute;
+  background-color: aqua;
+}
+
+.destHeading {
+  font-size: 35px !important;
+  text-align: center !important;
+  font-weight: 600;
+  font-family:
+    "Montserrat"
+    sans-serif;
+  margin-top: 25px !important;
+
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgba(36, 133, 176, 0.9)!important;  /* Semi-transparent white background */
+  padding: 10px;
+  text-align: center;
+  transform: translateY(50%);
+}
+.subHead {
+  font-size: 18px !important;
+  text-align: center !important;
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
+  font-family:
+    "Montserrat"
+    sans-serif;
+}
+
+.videoHead {
+  font-size: 25px !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Open Sans"
+    sans-serif;
+}
+
+.videoSubHead {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.videoDesc {
+
+  font-family: "Open Sans"
+    sans-serif;
+  font-size: 15px !important;
+}
+
+.videoBackground {
+  height: 600px !important;
+  margin-top: 40px !important;
+
+}
+
+.videoContainer {
+  position: relative;
+
+}
+
+.videoIcons {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  color: #2485B0;
+
+
+  font-size: 86px !important;
+}
+
+.blogTitle {
+  font-size: 28px !important;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  text-align: left !important;
+}
+
+.blogDesc {
+
+  text-align: left !important;
+}
+
+.blogBtn {
+
+  text-align: left !important;
+  color: #d49a06;
+}
+
+
+.blogImage {
+  position: relative;
+}
+
+.blogOverlay {
+  position: absolute;
+  padding: 5px 10px 0px 10px !important;
+  border-radius: 3px !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 2% !important;
+  left: 5% !important;
+
+}
+
+
+.footerBackground {
+  background-color: #2485B0;
+  height: 300px !important;
+  width: 100% !important;
+}
+
+.footerLogo {
+
+  margin-top: 80px !important;
+
+}
+
+.footerNav {
+  padding: 20px !important;
+  text-decoration: none !important;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: small;
+
+}
+
+.footerIcons {
+
+  color: white;
+  font-size: 40px !important;
+  box-shadow: 0 px 0px 0 rgba(255, 251, 251, 0.2);
+  margin: 30px !important;
+  transition: 0.5s;
+}
+
+.footerIcons:hover {
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+
+}
