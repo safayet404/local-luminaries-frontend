@@ -1,0 +1,26 @@
+.navBar{
+    padding-right: 290px !important;
+   
+}
+
+.logo {
+    height: 70px !important;
+    width: 100px !important;
+
+}
+.logo-text {
+    color: white !important;font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 30px !important;
+}
+.navItem{
+    text-decoration: none !important;
+    text-transform: uppercase;
+    padding: 10px !important;
+    color: white !important;
+    margin: 10px !important;
+}
+
+.navBackground{
+    background-color : #2485B0 !important;
+}
