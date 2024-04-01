@@ -1,0 +1,189 @@
+.commonBanner {
+    overflow: hidden;
+}
+
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust opacity as needed */
+}
+
+.pageContent {
+    position: relative;
+    z-index: 1;
+    /* Ensure content is above overlay */
+}
+
+
+
+.teamContainer {
+    width: 1100px !important;
+}
+
+.image {
+    width: 100%;
+    height: 600px !important;
+
+}
+
+.aboutSocialIcons {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    color: white !important;
+    font-size: 30px !important;
+
+
+}
+
+.aboutSocialIcons ul p {
+
+    margin: 50px !important;
+
+
+}
+
+.pageContent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    color: white !important;
+
+}
+
+.pageHead {
+    font-size: 40px !important;
+    font-weight: 600 !important;
+    margin-left: 50px !important;
+    font-family: "Montserrat"
+        sans-serif;
+    margin-top: 290px !important;
+
+
+}
+
+.pageSubHead {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    margin-left: 50px !important;
+    font-family: "Montserrat"
+        sans-serif;
+
+
+}
+
+.imageSectionBackground {
+    background-color: #2485B0;
+
+}
+
+.memories-image {
+
+    height: 600px !important;
+    width: 600px !important;
+    padding: 50px !important;
+}
+
+.memoriesHead {
+    text-align: left !important;
+    font-family: "Montserrat"
+        sans-serif;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 700;
+
+
+}
+
+.memoriesSubHead {
+    text-align: left !important;
+    font-family: "Montserrat"
+        sans-serif;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+    font-weight: 700;
+
+
+}
+
+.memoriesSubContent {
+    text-align: left !important;
+    font-family: "Montserrat"
+        sans-serif;
+    margin-bottom: 20px;
+    font-size: 15px;
+
+}
+
+.ImageContentHead {
+    text-align: left !important;
+    font-family: "Montserrat"
+        sans-serif;
+    font-weight: 700;
+
+    font-size: 20px;
+
+}
+
+.ImageContentSubHead {
+    text-align: left !important;
+    font-family: "Montserrat"
+        sans-serif;
+}
+
+.teamCard {
+    width: 250px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.teamCardOpacity {
+    position: absolute;
+    padding: 10px !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 15px !important;
+    left: 5% !important;
+    right: 5% !important;
+}
+
+.teamSocailIcons {
+    background-color: #2A9D8F;
+    color: white;
+    padding: 3px !important;
+    font-size: 25px !important;
+    font-weight: 700;
+    border-radius: 4px !important;
+    margin: 0px 3px 0px 3px !important;
+    cursor: pointer;
+}
+
+.teamDesignation {
+    font-weight: 700;
+    font-family: "Montserrat"
+        sans-serif;
+}

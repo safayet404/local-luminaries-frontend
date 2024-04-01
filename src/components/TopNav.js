@@ -1,15 +1,34 @@
 
-import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/Untitled(1).png"
-import { Layout, Menu, Button, theme } from "antd";
-import { Fragment } from "react";
-import { Link, Outlet } from "react-router-dom";
-const { Header, Sider, Content } = Layout;
+
+import { Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 const TopNav = () => {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Fragment>
     
-     <Navbar fixed="top" collapseOnSelect expand="lg" className="navBackground">
+     <Navbar fixed="top" collapseOnSelect expand="lg" bg={scrolling ? "navBackground" : "transparent"}
+        className={scrolling ? "navBackground" : ""}
+        variant={scrolling ? "light" : ""}>
       <Container>
     
         <Navbar.Brand className="logo-text" href="/">

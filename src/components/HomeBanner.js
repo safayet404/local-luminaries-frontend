@@ -18,6 +18,9 @@ import DS6 from "../images/destination-6.jpg"
 import ImageSlider from './ImageSlider'
 import Activity from './Activity'
 import Destination from './Destination'
+import Tours from './Tours'
+import Video from './Video'
+import CommonBanner from './CommonBanner'
 const slides = [
   {
     image: SB1, 
@@ -102,6 +105,9 @@ const HomeBanner = () => {
      <ImageSlider slides={slides}/>
        <Activity actData={cardData}></Activity>
        <Destination dstCard={destinationData}></Destination>
+       <Tours />
+       <Video />
+       <CommonBanner title="Araf" subTitle="Safayet" />
     </div>
   )
 }
