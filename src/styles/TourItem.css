@@ -98,6 +98,12 @@
 
   .btn-align{
     justify-content: end !important;
+    text-decoration: none !important;
+  }
+  .link-decoration{
+    color: black;
+    font-weight: 400;
+    text-decoration: none !important;
   }
 
   .priceTag{

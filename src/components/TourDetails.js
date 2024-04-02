@@ -17,6 +17,7 @@ import {
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
+import { Link } from "react-router-dom";
 const TourDetails = () => {
   return (
     <Fragment>
@@ -70,7 +71,7 @@ const TourDetails = () => {
               </ul>
             </div>
             <div className="mt-5">
-                <hr/>
+              <hr />
               <Accordion
                 className="border-0 mb-4"
                 allowZeroExpanded
@@ -79,197 +80,202 @@ const TourDetails = () => {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="status">
-                     What's included ?
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                   <ul>
-                    <li>
-                    TripAdvisor Experiences brokerage fee
-                    </li>
-                    <li>
-                    Bottled water
-                    </li>
-                    <li>
-                    Professional guide
-                    </li>
-                    <li>
-                    Hotel pickup and drop-off
-                    </li>
-                    <li>
-                    Entry/Admission - Curzon Hall
-                    </li>
-                    <li>
-                    Entry/Admission - Dhaka City
-                    </li>
-                    <li>
-                    Entry/Admission - Armenian Church
-                    </li>
-                    <li>
-                    Entry/Admission - Star Mosque (Tara Masjid)
-                    </li>
-                    <li>
-                    Entry/Admission - Sadarghat
-                    </li>
-                   </ul>
-                  </AccordionItemPanel>
-                </AccordionItem>
-                <hr/>
-
-                <AccordionItem className="mt-3">
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="status">
-                     What to expect?
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                  <p> <span className="mainMenu">Start :</span> Shahbag Flower Market, Dhaka University Campus, Dhaka 1205, Bangladesh. <br/><br/> Morning Flower market in Dhaka is interesting, sits early in the morning and lots of colors and festivity are in market. best time to visit the market between 07:00-08:00 am in the morning. <br/> Duration: 30 minutes </p>
-                    <p><span className="mainMenu">Pickup Details :</span>Curzon Hall, University Street, Dhaka City 1000 Bangladesh <br/> </p>
-                    <p><span className="mainMenu">Hotel Pickup Offered :</span>During checkout you will be able to select from the list of included hotels.</p>
-                    <p><span className="mainMenu">End :</span>This activity ends back at the meeting point.</p>
-                  </AccordionItemPanel>
-                </AccordionItem>
-                <hr/>
-
-                <AccordionItem className="mt-3">
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="status">
-                     Departure and return
-                    </AccordionItemButton>
-                  </AccordionItemHeading>
-                  <AccordionItemPanel>
-                    <p> <span className="mainMenu">Start :</span> Multiple pickup locations offered.</p>
-                    <p><span className="mainMenu">Pickup Details :</span>We will pickup you all from your pickup places even its home or hotel inside Dhaka .</p>
-                    <p><span className="mainMenu">Hotel Pickup Offered :</span>During checkout you will be able to select from the list of included hotels.</p>
-                    <p><span className="mainMenu">End :</span>This activity ends back at the meeting point.</p>
-                   
-                  </AccordionItemPanel>
-                </AccordionItem>
-                <hr/>
-                <AccordionItem className="mt-3">
-                  <AccordionItemHeading>
-                    <AccordionItemButton className="status">
-                    Accessibility
+                      What's included ?
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <ul>
-                        <li>
-                        Infant seats available
-                        </li>
-                        <li>
-                        Not wheelchair accessible
-                        </li>
-                        <li>
-                        Service animals allowed
-                        </li>
-                        <li>
-                        Infants must sit on laps
-                        </li>
+                      <li>TripAdvisor Experiences brokerage fee</li>
+                      <li>Bottled water</li>
+                      <li>Professional guide</li>
+                      <li>Hotel pickup and drop-off</li>
+                      <li>Entry/Admission - Curzon Hall</li>
+                      <li>Entry/Admission - Dhaka City</li>
+                      <li>Entry/Admission - Armenian Church</li>
+                      <li>Entry/Admission - Star Mosque (Tara Masjid)</li>
+                      <li>Entry/Admission - Sadarghat</li>
+                    </ul>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <hr />
+
+                <AccordionItem className="mt-3">
+                  <AccordionItemHeading>
+                    <AccordionItemButton className="status">
+                      What to expect?
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      {" "}
+                      <span className="mainMenu">Start :</span> Shahbag Flower
+                      Market, Dhaka University Campus, Dhaka 1205, Bangladesh.{" "}
+                      <br />
+                      <br /> Morning Flower market in Dhaka is interesting, sits
+                      early in the morning and lots of colors and festivity are
+                      in market. best time to visit the market between
+                      07:00-08:00 am in the morning. <br /> Duration: 30 minutes{" "}
+                    </p>
+                    <p>
+                      <span className="mainMenu">Pickup Details :</span>Curzon
+                      Hall, University Street, Dhaka City 1000 Bangladesh <br />{" "}
+                    </p>
+                    <p>
+                      <span className="mainMenu">Hotel Pickup Offered :</span>
+                      During checkout you will be able to select from the list
+                      of included hotels.
+                    </p>
+                    <p>
+                      <span className="mainMenu">End :</span>This activity ends
+                      back at the meeting point.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <hr />
+
+                <AccordionItem className="mt-3">
+                  <AccordionItemHeading>
+                    <AccordionItemButton className="status">
+                      Departure and return
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <p>
+                      {" "}
+                      <span className="mainMenu">Start :</span> Multiple pickup
+                      locations offered.
+                    </p>
+                    <p>
+                      <span className="mainMenu">Pickup Details :</span>We will
+                      pickup you all from your pickup places even its home or
+                      hotel inside Dhaka .
+                    </p>
+                    <p>
+                      <span className="mainMenu">Hotel Pickup Offered :</span>
+                      During checkout you will be able to select from the list
+                      of included hotels.
+                    </p>
+                    <p>
+                      <span className="mainMenu">End :</span>This activity ends
+                      back at the meeting point.
+                    </p>
+                  </AccordionItemPanel>
+                </AccordionItem>
+                <hr />
+                <AccordionItem className="mt-3">
+                  <AccordionItemHeading>
+                    <AccordionItemButton className="status">
+                      Accessibility
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    <ul>
+                      <li>Infant seats available</li>
+                      <li>Not wheelchair accessible</li>
+                      <li>Service animals allowed</li>
+                      <li>Infants must sit on laps</li>
                     </ul>
                     <p className="accordion-details">
-                    If you have questions about accessibility, we’d be happy to help. Just call the number below and reference the product code: 74936P4
-+8801679175553
+                      If you have questions about accessibility, we’d be happy
+                      to help. Just call the number below and reference the
+                      product code: 74936P4 +8801679175553
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                <hr/>
+                <hr />
                 <AccordionItem className="mt-3">
                   <AccordionItemHeading>
                     <AccordionItemButton className="status">
-                   Additional Information
+                      Additional Information
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p className="accordion-details">
-                     <ul>
+                      <ul>
                         <li>
-                        Confirmation will be received at time of booking
+                          Confirmation will be received at time of booking
+                        </li>
+                        <li>Minimum age is 18 years</li>
+                        <li>Infant meals not included</li>
+                        <li>A minimum of 01 people per booking is required</li>
+                        <li>Most travelers can participate</li>
+                        <li>
+                          This tour is to explore the city using local
+                          transportation like rickshaw , tuktuk, uber .
                         </li>
                         <li>
-                        Minimum age is 18 years
+                          Woman's need to cover the head during visiting mosque
                         </li>
                         <li>
-                        Infant meals not included
+                          This is a private tour/activity. Only your group will
+                          participate
                         </li>
-                        <li>
-                        A minimum of 01 people per booking is required
-                        </li>
-                        <li>
-                        Most travelers can participate
-                        </li>
-                        <li>
-                        This tour is to explore the city using local transportation like rickshaw , tuktuk, uber .
-                        </li>
-                        <li>
-                        Woman's need to cover the head during visiting mosque 
-                        </li>
-                        <li>
-                        This is a private tour/activity. Only your group will participate 
-                        </li>
-                     </ul>
+                      </ul>
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                <hr/>
+                <hr />
                 <AccordionItem className="mt-3">
                   <AccordionItemHeading>
                     <AccordionItemButton className="status">
-                    Cancellation Policy
+                      Cancellation Policy
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p className="accordion-details">
-                    For a full refund, cancel at least 24 hours in advance of the start date of the experience.
+                      For a full refund, cancel at least 24 hours in advance of
+                      the start date of the experience.
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                <hr/>
+                <hr />
                 <AccordionItem className="mt-3">
                   <AccordionItemHeading>
                     <AccordionItemButton className="status">
-                   FAQ
+                      FAQ
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p className="accordion-details">
-                    Which attractions will I visit with Explore Dhaka City in a Local Way !!?
-        During this experience, places you will visit include:
-
-            Sadarghat
-            Armenian Church
-            Star Mosque (Tara Masjid)
-            Curzon Hall
-            New Market
-
-        Discover and book Explore Dhaka City in a Local Way !! on Tripadvisor
-    How much is Explore Dhaka City in a Local Way !!?
-        Explore Dhaka City in a Local Way !! price starts from $59.94. Discover and book Explore Dhaka City in a Local Way !! on Tripadvisor
-    What is the Explore Dhaka City in a Local Way !! cancellation policy?
-        Explore Dhaka City in a Local Way !! cancellation policy: For a full refund, cancel at least 24 hours in advance of the start date of the experience. Discover and book Explore Dhaka City in a Local Way !! on Tripadvisor
-    Which company provides Explore Dhaka City in a Local Way !!?
-        Explore Dhaka City in a Local Way !! is hosted by Bangladesh Eco Adventure. Read reviews, discover additonal experiences or contact Bangladesh Eco Adventure on Tripadvisor. Discover and book Explore Dhaka City in a Local Way !! on Tripadvisor
-
-
+                      Which attractions will I visit with Explore Dhaka City in
+                      a Local Way !!? During this experience, places you will
+                      visit include: Sadarghat Armenian Church Star Mosque (Tara
+                      Masjid) Curzon Hall New Market Discover and book Explore
+                      Dhaka City in a Local Way !! on Tripadvisor How much is
+                      Explore Dhaka City in a Local Way !!? Explore Dhaka City
+                      in a Local Way !! price starts from $59.94. Discover and
+                      book Explore Dhaka City in a Local Way !! on Tripadvisor
+                      What is the Explore Dhaka City in a Local Way !!
+                      cancellation policy? Explore Dhaka City in a Local Way !!
+                      cancellation policy: For a full refund, cancel at least 24
+                      hours in advance of the start date of the experience.
+                      Discover and book Explore Dhaka City in a Local Way !! on
+                      Tripadvisor Which company provides Explore Dhaka City in a
+                      Local Way !!? Explore Dhaka City in a Local Way !! is
+                      hosted by Bangladesh Eco Adventure. Read reviews, discover
+                      additonal experiences or contact Bangladesh Eco Adventure
+                      on Tripadvisor. Discover and book Explore Dhaka City in a
+                      Local Way !! on Tripadvisor
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                <hr/>
+                <hr />
                 <AccordionItem className="mt-3">
                   <AccordionItemHeading>
                     <AccordionItemButton className="status">
-                  Help
+                      Help
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <p className="accordion-details">
-                    If you have questions about this tour or need help making your booking, we’d be happy to help. Just call the number below and reference the product code: 74936P4
-+1 855 275 5071
+                      If you have questions about this tour or need help making
+                      your booking, we’d be happy to help. Just call the number
+                      below and reference the product code: 74936P4 +1 855 275
+                      5071
                     </p>
                   </AccordionItemPanel>
                 </AccordionItem>
-                <hr/>
-              
+                <hr />
               </Accordion>
             </div>
           </Col>
@@ -283,8 +289,9 @@ const TourDetails = () => {
                   <p>per adult (price varies by group size)</p>
                 </Col>
                 <Col lg={4}>
+                 
                   <Button variant="warning" className="btn-align">
-                    Book Now
+                    <Link className="link-decoration" to="/booking">Book Now</Link>
                   </Button>
                 </Col>
                 <hr className="mt-3" />
