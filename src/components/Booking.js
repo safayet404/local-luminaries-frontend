@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row, Table } from "react-bootstrap";
 import thumb from "../images/activities-10.jpg";
 import CustomInput from "./CustomInput";
+import { HashLink } from "react-router-hash-link";
 const Booking = () => {
   const pricePerUnit = 5000;
   const [quantity, setQuantity] = useState(0);
@@ -67,7 +68,7 @@ const Booking = () => {
 
               <Col lg={3}>
                 <div className="total-price">
-                  <label>Total Price:</label>
+                  <label>Total Price :  </label>
                   <span>{totalPrice}</span>
                 </div>
               </Col>

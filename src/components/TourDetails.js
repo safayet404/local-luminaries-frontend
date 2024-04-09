@@ -18,6 +18,7 @@ import {
 
 import "react-accessible-accordion/dist/fancy-example.css";
 import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 const TourDetails = () => {
   const locations = useLocation()
 
@@ -295,7 +296,10 @@ const TourDetails = () => {
                 <Col lg={4}>
                  
                   <Button variant="warning" className="btn-align">
-                    <Link className="link-decoration" to="/booking">Book Now</Link>
+                    <HashLink  smooth className="link-decoration" to="/booking#top">Book Now</HashLink>
+                   
+                
+                    
                   </Button>
                 </Col>
                 <hr className="mt-3" />

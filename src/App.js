@@ -8,6 +8,11 @@ import TourDetails from "./components/TourDetails";
 import TourDetailsPage from "./pages/TourDetailsPage";
 import BookingPage from "./pages/BookingPage";
 import { Switch } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";
+import TourPage from "./pages/TourPage";
+import HomePage from "./pages/HomePage";
+import TeamPage from "./pages/TeamPage";
+import ContactPage from "./pages/ContactPage";
 
 function App({ props }) {
   return (
@@ -16,9 +21,13 @@ function App({ props }) {
         <TopNav />
 
         <Routes>
-          <Route path="/" element={<HomeBanner />}></Route>
+          <Route path="/" element={<HomePage />}></Route>
           <Route path="/details" element={<TourDetailsPage />}></Route>
           <Route path="/booking" element={<BookingPage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/tours" element={<TourPage />}></Route>
+          <Route path="/team" element={<TeamPage />}></Route>
+          <Route path="/contact" element={<ContactPage />}></Route>
         </Routes>
       </Router>
     </div>

@@ -187,3 +187,8 @@
     font-family: "Montserrat"
         sans-serif;
 }
+
+.teamImage{
+    height : 370px !important;
+    width: 250px !important;
+}

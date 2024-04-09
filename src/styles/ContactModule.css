@@ -1,0 +1,29 @@
+.contactIcons{
+    color: white;
+    background-color: #2485B0;
+    font-size: 75px;
+    border-radius: 50%;
+    padding: 10px !important;
+   
+}
+
+.contactFormBackground {
+    background-color: #F0F2F5 !important;
+    width: 100% !important;
+    padding: 13px !important;
+  
+    border-radius: 20px !important;
+
+}
+.contactFormBackground:focus {
+    outline: 0;
+}
+
+.contactContainer{
+    width: 900px !important;
+}
+
+.icon-container{
+    background-color:#EFF4F5 !important;
+    
+}
