@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import tb1 from "../images/feature-thumb-0.jpg";
 import tb2 from "../images/feature-thumb-1.jpg";
@@ -17,8 +17,12 @@ import {
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const TourDetails = () => {
+  const locations = useLocation()
+
+  const id = locations.pathname.split("/")[1]
+  console.log(id)
   return (
     <Fragment>
       <Container className="mt-5 ">

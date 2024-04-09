@@ -15,6 +15,32 @@ import DS3 from "../images/destination-3.jpg"
 import DS4 from "../images/destination-4.jpg"
 import DS5 from "../images/destination-5.jpg"
 import DS6 from "../images/destination-6.jpg"
+import B1 from "../images/B-1.jpg"
+import B2 from "../images/B-2.jpg"
+import B3 from "../images/B-3.jpg"
+import B4 from "../images/B-4.jpg"
+import B5 from "../images/B-5.jpg"
+import B6 from "../images/B-6.jpg"
+import B7 from "../images/B-7.jpg"
+import B8 from "../images/B-8.jpg"
+import B9 from "../images/B-9.jpg"
+import B10 from "../images/B-10.jpg"
+import B11 from "../images/B-11.jpg"
+import B12 from "../images/B-12.jpg"
+import B13 from "../images/B-13.jpg"
+import B14 from "../images/B-14.jpg"
+import B15 from "../images/B-15.jpg"
+import B16 from "../images/B-16.jpg"
+import B17 from "../images/B-17.jpg"
+import B18 from "../images/B-18.jpg"
+import B19 from "../images/B-19.jpg"
+import B20 from "../images/B-20.jpg"
+import B21 from "../images/B-21.jpg"
+import B22 from "../images/B-22.jpg"
+import B23 from "../images/B-23.jpg"
+import B24 from "../images/B-24.jpg"
+import B25 from "../images/B-25.jpg"
+
 import ImageSlider from './ImageSlider'
 import Activity from './Activity'
 import Destination from './Destination'
@@ -23,22 +49,32 @@ import Video from './Video'
 import CommonBanner from './CommonBanner'
 const slides = [
   {
-    image: SB1, 
+    image: B1, 
     text: "Explore the world",
     desc: "A more rewarding way to travel",
   },
   {
-    image: SB2,
+    image: B18,
     text: "Find your passion",
     desc: "escape life for a little while",
   },
   {
-    image: SB3,
+    image: B8,
     text: "commit to travel",
     desc: "The real adventure is out there",
   },
   {
-    image: SB4,
+    image: B9,
+    text: "Be an adventurer",
+    desc: "collecting memories every time",
+  },
+  {
+    image: B19,
+    text: "Be an adventurer",
+    desc: "collecting memories every time",
+  },
+  {
+    image: B20,
     text: "Be an adventurer",
     desc: "collecting memories every time",
   },
@@ -70,33 +106,33 @@ const cardData = [
 
 const destinationData = [
   {
-    image : DS1,
-    title : "New York",
+    image : B1,
+    title : "Cox's Bazar",
     rating : 5,
   },
   {
-    image : DS2,
-    title : "Rome",
+    image : B25,
+    title : "Bandarban",
     rating : 5,
   },
   {
-    image : DS3,
-    title : "Machu Pichu",
+    image : B24,
+    title : "Sadhapathor",
     rating : 5,
   },
   {
-    image : DS4,
-    title : "Hawaii",
+    image : B23,
+    title : "Sylhet",
     rating : 5,
   },
   {
-    image : DS5,
-    title : "Canada",
+    image : B22,
+    title : "Ratargul",
     rating : 5,
   },
   {
-    image : DS6,
-    title : "Greece"
+    image : B21,
+    title : "Sreemangal"
   },
 ]
 const HomeBanner = () => {
@@ -107,7 +143,7 @@ const HomeBanner = () => {
        <Destination dstCard={destinationData}></Destination>
        <Tours />
        <Video />
-       <CommonBanner title="Araf" subTitle="Safayet" />
+      
     </div>
   )
 }

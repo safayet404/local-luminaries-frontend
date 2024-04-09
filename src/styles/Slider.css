@@ -77,12 +77,12 @@
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  
   text-align: center;
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 15px;
-  color: #abb9c7
+  color: #19191a !important;
 }
 
 .slideDesc {
@@ -90,7 +90,7 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(216, 216, 216) !important;
   text-align: center;
   font-size: 40px;
   text-transform: uppercase;
@@ -204,10 +204,14 @@
 
 }
 
+.destinationImage{
+  height: 300px !important;
+  width: 400px !important;
+}
 .card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 35%;
+  left: -25%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -215,12 +219,7 @@
   align-items: center;
 }
 
-.card {
-  background-color: rgba(36, 133, 176, 0.9)!important;  /* Semi-transparent white background */
-  padding: 10px;
-  text-align: center;
-  transform: translateY(50%);
-}
+
 .subHead {
   font-size: 18px !important;
   text-align: center !important;
@@ -341,3 +340,4 @@
   box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
 
 }
+

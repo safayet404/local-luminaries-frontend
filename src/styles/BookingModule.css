@@ -1,0 +1,40 @@
+.thumbnail-img{
+    height: 150px !important;
+    width: 150px !important;
+}
+
+.booking-heading{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding:0px 0px 0px 15px !important;
+}
+.input-group {
+    margin: 15px;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .total-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .detailsCard {
+   
+    background-color:#F6FAFD;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+

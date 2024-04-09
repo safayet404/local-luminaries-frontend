@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { RxDrawingPinFilled } from "react-icons/rx";
 const Destination = ({ dstCard }) => {
   return (
     <Fragment>
@@ -16,16 +17,13 @@ const Destination = ({ dstCard }) => {
                 <img
                   src={data.image}
                   alt={`Destination ${index + 1}`}
-                  className="w-100 h-100 object-cover"
+                  className="destinationImage object-cover"
                 />
                 <div class="card-overlay">
-                  <div class="card ">
-                    <h2 className="text-white">{data.title}</h2>
+                  <div>
+                    <h2 className="text-white"> {data.title}</h2>
 
-                    <div className="d-flex align-items-center mt-2">
-                      <span className="text-warning">★</span>
-                      <span className="ms-1 text-white">{data.rating}</span>
-                    </div>
+                    <div className="d-flex align-items-center mt-2"></div>
                   </div>
                 </div>
               </div>
