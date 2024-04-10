@@ -13,6 +13,9 @@ import TourPage from "./pages/TourPage";
 import HomePage from "./pages/HomePage";
 import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
+import BlogDetailsPage from "./pages/BlogDetailsPage";
+import Footer from "./components/Footer";
 
 function App({ props }) {
   return (
@@ -28,7 +31,11 @@ function App({ props }) {
           <Route path="/tours" element={<TourPage />}></Route>
           <Route path="/team" element={<TeamPage />}></Route>
           <Route path="/contact" element={<ContactPage />}></Route>
+          <Route path="/blog" element={<BlogPage />}></Route>
+          <Route path="/blog-details" element={<BlogDetailsPage />}></Route>
+          
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

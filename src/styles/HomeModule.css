@@ -269,17 +269,20 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   text-align: left !important;
+  margin: 0px 0px 0px 15px;
 }
 
 .blogDesc {
 
   text-align: left !important;
+  margin: 0px 0px 0px 15px;
 }
 
 .blogBtn {
 
   text-align: left !important;
-  color: #d49a06;
+  
+  margin: 10px 0px 0px 15px;
 }
 
 
@@ -297,11 +300,14 @@
 
 }
 
-
+.big-blog-image{
+  height: 145px;
+  width: 150px;
+}
 .footerBackground {
   background-color: #2485B0;
-  height: 300px !important;
-  width: 100% !important;
+  height: 70px !important;
+  
 }
 
 .footerLogo {
@@ -310,13 +316,14 @@
 
 }
 
-.footerNav {
+
+.footerText {
   padding: 20px !important;
   text-decoration: none !important;
   color: white;
-  text-transform: uppercase;
   font-weight: 600;
   font-size: small;
+  font-size: 14px !important;
 
 }
 
@@ -333,3 +340,4 @@
   box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
 
 }
+

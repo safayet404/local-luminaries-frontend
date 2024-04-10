@@ -47,6 +47,7 @@ import Destination from './Destination'
 import Tours from './Tours'
 import Video from './Video'
 import CommonBanner from './CommonBanner'
+import Blog from './Blog'
 const slides = [
   {
     image: B1, 
@@ -143,6 +144,7 @@ const HomeBanner = () => {
        <Destination dstCard={destinationData}></Destination>
        <Tours />
        <Video />
+       <Blog/>
       
     </div>
   )
