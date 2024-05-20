@@ -154,12 +154,15 @@
 }
 
 .teamCard {
-    width: 250px;
-    border-radius: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: relative; /* Ensure this div positions its child elements relative to itself */
+  border-radius: 3px;
+  max-width: 300px;
+ 
+  margin: auto; /* Center horizontally */
+  display: flex; /* Use flexbox for centering child elements */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow: hidden; 
 }
 
 .teamCardOpacity {

@@ -43,11 +43,14 @@ const Contact = () => {
         </Row>
       </Container>
 
-      <Container className="text-center contactContainer mb-4">
+      <Container className="text-center  mb-4 mt-5">
+      
+      <Row >
+        <Col lg={6} md={12} sm={12}>
         <h3 className="mt-4">Get in Touch With Us</h3>
         <p>World’s leading non-asset- based supply chain management companies, we design and implement industry-leading. We specialise in intelligent & effective search and believes business.</p>
-      <Row>
-        <Col>
+        </Col>
+        <Col lg={6} md={12} sm={12}>
           <form>
             <Row>
               <Col className="mt-3">

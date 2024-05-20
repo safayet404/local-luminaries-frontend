@@ -12,17 +12,16 @@ const Destination = ({ dstCard }) => {
         </p>
         <Row>
           {dstCard.map((data, index) => (
-            <Col className="mt-3" lg={4} md={6} sm={12} key={index}>
-              <div className="position-relative">
+            <Col className="mt-3" lg={3} md={6} sm={12} key={index}>
+              <div className="destCard">
                 <img
                   src={data.image}
                   alt={`Destination ${index + 1}`}
-                  className="destinationImage object-cover"
+                  className="destinationImage"
                 />
-                <div class="card-overlay">
+                <div className="card-overlay">
                   <div>
-                    <h2 className="text-white"> {data.title}</h2>
-
+                    <h4>{data.title}</h4>
                     <div className="d-flex align-items-center mt-2"></div>
                   </div>
                 </div>

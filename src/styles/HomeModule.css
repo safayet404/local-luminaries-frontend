@@ -108,18 +108,14 @@
   flex-direction: column;
   color: white;
   font-size: 35px !important;
+  
 
 }
 
-.socialIcons ul li {
+.socialIcons ul p {
 
   padding: 50px !important;
-
-
-
 }
-
-
 .activitiesContainer {
   padding-right: 0;
   padding-left: 0;
@@ -242,7 +238,7 @@
 .videoBackground {
   height: 600px !important;
   margin-top: 40px !important;
-  width: 100%;
+  width: 100% !important;
 }
 
 .videoContainer {

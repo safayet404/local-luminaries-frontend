@@ -154,6 +154,40 @@
 
 }
 
+.destCard {
+  position: relative; /* Ensure this div positions its child elements relative to itself */
+  border-radius: 3px;
+  max-width: 300px;
+ 
+  margin: auto; /* Center horizontally */
+  display: flex; /* Use flexbox for centering child elements */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  overflow: hidden; /* Ensure children don't overflow the card's border radius */
+}
+
+.destinationImage {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove default inline spacing */
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0% !important;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  color: white;
+}
+
+.card-overlay h2 {
+  margin: 0;
+}
+
 .ActCard:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }

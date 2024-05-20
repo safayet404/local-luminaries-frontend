@@ -1,6 +1,6 @@
 .tourCardImage{
     height: 300px !important;
-    width: 368px !important;
+    width: 300px !important;
 }
 
 .cardTitle{
@@ -12,6 +12,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     margin-bottom: 20px;
+    max-width: 300px !important;
   
     border-radius: 2px !important;
   }

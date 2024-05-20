@@ -63,9 +63,13 @@ const Tours = () => {
                       85000 <TbCurrencyTaka />{" "}
                     </h5>
                   </div>
-                  <Link to="/" className="tourCardLink mb-2">
-                    Details
-                  </Link>
+                  <HashLink
+                    smooth
+                    to="/details#top"
+                    className="tourCardLink mb-2"
+                  >
+                     <Button className="btn-warning mb-2">Details</Button>
+                  </HashLink>
                 </div>
               </div>
             </div>
@@ -82,9 +86,13 @@ const Tours = () => {
                       85000 <TbCurrencyTaka />{" "}
                     </h5>
                   </div>
-                  <Link to="/" className="tourCardLink mb-2">
-                    Details
-                  </Link>
+                  <HashLink
+                    smooth
+                    to="/details#top"
+                    className="tourCardLink mb-2"
+                  >
+                     <Button className="btn-warning mb-2">Details</Button>
+                  </HashLink>
                 </div>
               </div>
             </div>
@@ -101,9 +109,13 @@ const Tours = () => {
                       85000 <TbCurrencyTaka />{" "}
                     </h5>
                   </div>
-                  <Link to="/" className="tourCardLink mb-2">
-                    Details
-                  </Link>
+                  <HashLink
+                    smooth
+                    to="/details#top"
+                    className="tourCardLink mb-2"
+                  >
+                     <Button className="btn-warning mb-2">Details</Button>
+                  </HashLink>
                 </div>
               </div>
             </div>
@@ -120,9 +132,13 @@ const Tours = () => {
                       85000 <TbCurrencyTaka />{" "}
                     </h5>
                   </div>
-                  <Link to="/details" className="tourCardLink mb-4">
-                    Details
-                  </Link>
+                  <HashLink
+                    smooth
+                    to="/details#top"
+                    className="tourCardLink mb-2"
+                  >
+                     <Button className="btn-warning mb-2">Details</Button>
+                  </HashLink>
                 </div>
               </div>
             </div>
@@ -145,7 +161,7 @@ const Tours = () => {
                     to="/details#top"
                     className="tourCardLink mb-2"
                   >
-                    Details
+                     <Button className="btn-warning mb-2">Details</Button>
                   </HashLink>
                 </div>
               </div>

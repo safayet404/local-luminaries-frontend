@@ -2,7 +2,9 @@ import Carousel from "nuka-carousel"
 import { CiTwitter, CiFacebook, CiInstagram } from "react-icons/ci";
 const ImageSlider = ({slides}) => {
   return (
-   <Carousel withoutControls wrapAround>
+   <Carousel withoutControls
+   wrapAround
+  >
     {slides.map((slide,index)=>(
      <div key={index} className="slide">
      <p className="slideText">{slide.text}</p>
@@ -35,3 +37,6 @@ const ImageSlider = ({slides}) => {
 };
 
 export default ImageSlider;
+
+// autoplay
+// autoplayInterval={3000}
