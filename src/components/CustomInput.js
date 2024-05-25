@@ -4,9 +4,10 @@ const CustomInput = (props) => {
     const {type,label,i_id,className,name,list,value,placeholder,onChange,onBlur} = props
   return (
     <div>
+       <label htmlFor={label}>{label}</label>
       <input
         type={type}
-        className={`form-control outlineRmv ${className}`}
+        className={`form-control ${className}`}
         id={i_id}
         placeholder={placeholder}
         name={name}
@@ -15,7 +16,7 @@ const CustomInput = (props) => {
         onBlur={onBlur}
         list={list}
       />
-      <label htmlFor={label}>{label}</label>
+     
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React, { Profiler } from "react";
 import HomeBanner from "../components/HomeBanner";
+import CustomizeTour from "../components/CustomizeTour";
 
 const HomePage = () => {
   const onRenderCallback = (
@@ -25,6 +26,7 @@ const HomePage = () => {
     <Profiler id="app" onRender={onRenderCallback}>
       <div>
         <HomeBanner />
+        
       </div>
     </Profiler>
   );

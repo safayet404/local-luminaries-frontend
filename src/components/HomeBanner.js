@@ -48,6 +48,7 @@ import Tours from './Tours'
 import Video from './Video'
 import CommonBanner from './CommonBanner'
 import Blog from './Blog'
+import CustomizeTour from './CustomizeTour'
 const slides = [
   {
     image: B1, 
@@ -140,6 +141,7 @@ const HomeBanner = () => {
   return (
     <div>
      <ImageSlider slides={slides}/>
+     <CustomizeTour />
        <Activity actData={cardData}></Activity>
        <Destination dstCard={destinationData}></Destination>
        <Tours />

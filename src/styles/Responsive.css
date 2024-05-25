@@ -40,6 +40,12 @@
     .logo-text {
         font-size: 20px !important;
     }
+    .tourCardImage{
+        width: 300px !important;
+    }
+    .tourCard {
+        max-width: 300px !important;  
+      }
 
 }
 
@@ -83,6 +89,12 @@
     .logo-text {
         font-size: 20px !important;
     }
+    .tourCardImage{
+        width: 300px !important;
+    }
+    .tourCard {
+        max-width: 300px !important;  
+      }
 
 }
 
@@ -130,6 +142,9 @@
     .blogTitle {
         font-size: 18px !important;
     }
+    .ActCard {
+        max-width: 400px !important;
+      }
 
 
 }
@@ -137,12 +152,12 @@
 
 @media (max-width: 575.98px) {
     .slideText {
-        font-size: 10px !important;
+        font-size: 8px !important;
         letter-spacing: 8px !important;
     }
 
     .slideDesc {
-        font-size: 13px !important;
+        font-size: 10px !important;
         letter-spacing: 5px !important;
         word-spacing: 1px !important;
     }
@@ -202,6 +217,30 @@
         height: 300px !important;
         margin-top: 40px !important;
         width: 100% !important;
+      }
+      
+      .section-image1{
+        height: 200px !important;
+        width: 300px !important;
+        margin-bottom: 10px !important;
+        display: flex;
+        justify-content : center !important;
+      }
+      .section-image2{
+        height: 200px !important;
+        width: 300px !important;
+        display: flex;
+        justify-content : center !important;
+      }
+      .booking-heading{
+        font-size: 10px !important;
+      }
+      .thumbnail-img{
+        height: 100px !important;
+        width: 100px !important;
+      }
+      .ActCard {
+        max-width: 400px !important;
       }
       
 

@@ -6,3 +6,19 @@
 @import url('./styles/BookingModule.css');
 @import url('./styles/ContactModule.css');
 @import url('./styles/Responsive.css');
+
+body{
+    overflow-x: hidden !important;
+}
+.form-control{
+    border: 1px solid #ccc !important;
+    
+    
+    
+}
+
+ .form-control:focus,
+ .form-control:active {
+  
+  box-shadow: none !important;
+}

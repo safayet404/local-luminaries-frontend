@@ -47,7 +47,7 @@ const Tours = () => {
   return (
     <Fragment>
       <Container className="topMargin">
-        <h1 className="text-center">Tour List</h1>
+        <h1 className="text-center mt-5">Tour List</h1>
         <Row className="mt-5 flex ">
           <Col className="mb-5" lg={4} md={6} sm={12}>
             <div className="d-flex justify-content-center">

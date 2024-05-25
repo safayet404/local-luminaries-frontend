@@ -31,8 +31,9 @@ const TopNav = () => {
         variant={scrolling ? "light" : ""}>
       <Container>
     
-        <Navbar.Brand className="logo-text" href="/">
-          <img className="logo" src={Logo} alt="logo" /> Luminaries
+        <Navbar.Brand className="logo-text">
+          <img className="logo" src={Logo} alt="logo" />
+          <Link to="/" className="logo-text">Luminaries</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

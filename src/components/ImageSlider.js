@@ -7,6 +7,7 @@ const ImageSlider = ({slides}) => {
   >
     {slides.map((slide,index)=>(
      <div key={index} className="slide">
+     <div>
      <p className="slideText">{slide.text}</p>
      <h1 className="slideDesc">{slide.desc}</h1>
      <img
@@ -27,6 +28,7 @@ const ImageSlider = ({slides}) => {
            <CiInstagram />
          </p>
        </ul>
+     </div>
      </div>
    </div>
     ))}
