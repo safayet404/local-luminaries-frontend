@@ -16,6 +16,8 @@ import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import Footer from "./components/Footer";
+import CustomizeBooking from "./components/CustomizeBooking";
+import CustomizeBookingPage from "./pages/CustomizeBookingPage";
 
 function App({ props }) {
   return (
@@ -27,6 +29,7 @@ function App({ props }) {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/details" element={<TourDetailsPage />}></Route>
           <Route path="/booking" element={<BookingPage />}></Route>
+          <Route path="/customize-booking" element={<CustomizeBookingPage />}></Route>
           <Route path="/about" element={<AboutPage />}></Route>
           <Route path="/tours" element={<TourPage />}></Route>
           <Route path="/team" element={<TeamPage />}></Route>
