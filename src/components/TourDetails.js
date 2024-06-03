@@ -17,12 +17,14 @@ import {
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
+
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
 const TourDetails = () => {
   const locations = useLocation()
 
-  const id = locations.pathname.split("/")[1]
+  const id = locations.pathname.split("/")[2]
   console.log(id)
   return (
     <Fragment>

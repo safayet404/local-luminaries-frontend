@@ -82,7 +82,7 @@ const Tours = () => {
                       </div>
                       <HashLink
                         smooth
-                        to="/details#top"
+                        to={`/details/${item._id}#top`} 
                         className="tourCardLink mb-2"
                       >
                         <Button className="btn-warning mb-2">Details</Button>
