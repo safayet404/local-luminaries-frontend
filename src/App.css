@@ -22,3 +22,7 @@ body{
   
   box-shadow: none !important;
 }
+
+.error{
+    color: red;
+}

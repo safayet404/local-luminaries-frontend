@@ -6,14 +6,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { base_url } from "../utils/base_url";
+import toast from "react-hot-toast";
 
 let customizeSchema = Yup.object().shape({
   destination: Yup.string().required("Destination is required"),
-  person: Yup.number().required("Person is required"),
-  duration: Yup.number().required("Person is required"),
+  person: Yup.number().required("Person Required"),
+  duration: Yup.number().required("Duration is required"),
   date: Yup.date().required("Date is required"),
 });
+
 const CustomizeTour = () => {
+
+  const [destinations, setDestinations] = useState([]);
+  //console.log("destination from state",destinations)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -32,6 +39,17 @@ const CustomizeTour = () => {
 
     },
   });
+
+  useEffect(()=>{
+    axios.get(`${base_url}destination/all-destination`)
+    .then(response =>{
+      console.log(response.data)
+      setDestinations(response.data)
+    })
+    .catch(error=>{
+      console.error("there was an error !",error)
+    })
+  },[])
   return (
     <Container className=" mt-5">
       <h2 className="activitiyHeader mb-4">Customize Your Tour</h2>
@@ -45,13 +63,19 @@ const CustomizeTour = () => {
               name="description"
               className="uniform-input"
             >
-              <option value="">Select The Destination</option>
-              <option value="Tongi">Tongi</option>
+              <option value="">Select Destination</option>
+              {destinations.map((dest,index)=>{
+            return (
+              <option key={index} value={dest.name}>{dest.name}</option>
+            )
+              
+              })}
             </select>
           </Col>
 
           <Col className="d-flex justify-content-center" lg={2} md={6} sm={12}>
             <CustomInput
+              min="1"
               className="measurement"
               type="number"
               placeholder="How Many Person?"
@@ -64,6 +88,7 @@ const CustomizeTour = () => {
             <CustomInput
               className="measurement"
               type="number"
+              min="1"
               placeholder="Duration?"
               onChange={formik.handleChange("duration")}
               onBlur={formik.handleBlur("duration")}
@@ -87,7 +112,9 @@ const CustomizeTour = () => {
               Booking
             </Button>
           </Col>
+         
         </Row>
+        
       </form>
     </Container>
   );

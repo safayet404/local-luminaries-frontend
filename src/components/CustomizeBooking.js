@@ -24,7 +24,7 @@ let customizeSchema = Yup.object().shape({
 
 const CustomizeBooking = () => {
   const location = useLocation();
-  const { state } = location; // Access the passed state
+  const { state } = location; 
   const { destination, person, date, duration } = state || {};
 
   const dispatch = useDispatch();
@@ -63,6 +63,7 @@ const CustomizeBooking = () => {
           <div className="border p-4">
             <h2 className="booking-heading">Destination: {destination}</h2>
             <h4 className="booking-heading">Person: {person}</h4>
+            <h4 className="booking-heading">Duration: {duration}</h4>
             <h4 className="booking-heading">Date: {date}</h4>
           </div>
         </Col>
