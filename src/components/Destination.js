@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { RxDrawingPinFilled } from "react-icons/rx";
+import LazyLoad from 'react-lazyload';
 const Destination = ({ dstCard }) => {
   return (
     <Fragment>
@@ -14,11 +15,13 @@ const Destination = ({ dstCard }) => {
           {dstCard.map((data, index) => (
             <Col className="mt-3" lg={3} md={6} sm={12} key={index}>
               <div className="destCard">
+              <LazyLoad once>
                 <img
                   src={data.image}
                   alt={`Destination ${index + 1}`}
                   className="destinationImage"
                 />
+                </LazyLoad>
                 <div className="card-overlay">
                   <div>
                     <h4>{data.title}</h4>
