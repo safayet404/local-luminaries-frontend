@@ -307,7 +307,7 @@ const TourDetails = () => {
                   <ul>
                     <li>Lowest price guarantee</li>
                     <li>Reserve now & pay later</li>
-                    <li>Free cancellation</li>
+                    <li>Free cancelssslation</li>
                   </ul>
                 </div>
               </Row>
