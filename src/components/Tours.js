@@ -64,10 +64,10 @@ const Tours = () => {
       <Container className="topMargin">
         <h1 className="text-center mt-5">Tour List</h1>
         <Row className="mt-5 flex ">
-              {tourItem.map((item, index) => {
-                return (
-          <Col key={index} className="mb-5" lg={4} md={6} sm={12}>
-            <div className="d-flex justify-content-center">
+          {tourItem.map((item, index) => {
+            return (
+              <Col key={index} className="mb-5" lg={4} md={6} sm={12}>
+                <div className="d-flex justify-content-center">
                   <div class="tourCard" style={{ maxWidth: "368px" }}>
                     <img src={B22} alt="Avatar" className="tourCardImage" />
                     <div class="tourContainer">
@@ -82,21 +82,17 @@ const Tours = () => {
                       </div>
                       <HashLink
                         smooth
-                        to={`/details/${item._id}#top`} 
+                        to={`/details/${item._id}#top`}
                         className="tourCardLink mb-2"
                       >
                         <Button className="btn-warning mb-2">Details</Button>
                       </HashLink>
                     </div>
                   </div>
-            </div>
-          </Col>
-                );
-              })}
-       
-        
-      
-        
+                </div>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </Fragment>

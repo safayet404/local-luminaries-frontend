@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import tb1 from "../images/feature-thumb-0.jpg";
 import tb2 from "../images/feature-thumb-1.jpg";
@@ -7,6 +7,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { GiDuration } from "react-icons/gi";
 import { IoTime } from "react-icons/io5";
 import { FaMobile } from "react-icons/fa";
+import { TbCurrencyTaka } from "react-icons/tb";
 import { TbWorldPin } from "react-icons/tb";
 import {
   Accordion,
@@ -20,12 +21,28 @@ import "react-accessible-accordion/dist/fancy-example.css";
 
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import axios from "axios";
+import { base_url } from "../utils/base_url";
 
 const TourDetails = () => {
+  const [singleTour,setSingleTour] = useState([])
+  console.log("okayy",singleTour);
   const locations = useLocation()
 
   const id = locations.pathname.split("/")[2]
-  console.log(id)
+  useEffect(()=>{
+    const fetchData = async () =>{
+      try{
+        const response = await axios.get(`${base_url}tour/single-tour/${id}`)
+        setSingleTour(response.data)
+
+      }catch(error)
+      {
+        console.error("Something went wrong",error)
+      }
+    }
+    fetchData()
+  },[id])
   return (
     <Fragment>
       <Container className="mt-5 ">
@@ -292,7 +309,7 @@ const TourDetails = () => {
 
               <Row>
                 <Col lg={8}>
-                  <h2 className="priceTag">5999 TAKA</h2>
+                  <h2 className="priceTag">{singleTour.price} <TbCurrencyTaka/></h2>
                   <p>per adult (price varies by group size)</p>
                 </Col>
                 <Col lg={4}>
