@@ -29,7 +29,7 @@ function App({ props }) {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/details/:id" element={<TourDetailsPage />}></Route>
-          <Route path="/booking" element={<BookingPage />}></Route>
+          <Route path="/booking/:id" element={<BookingPage />}></Route>
           <Route path="/customize-booking" element={<CustomizeBookingPage />}></Route>
           <Route path="/about" element={<AboutPage />}></Route>
           <Route path="/tours" element={<TourPage />}></Route>
