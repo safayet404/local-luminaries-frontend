@@ -298,8 +298,8 @@
 }
 
 .big-blog-image{
-  height: 145px;
-  width: 150px;
+  height: 145px !important;
+  width: 150px !important;
 }
 .footerBackground {
   background-color: #2485B0;

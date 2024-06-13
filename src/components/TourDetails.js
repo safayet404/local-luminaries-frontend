@@ -27,7 +27,7 @@ import { base_url } from "../utils/base_url";
 
 const TourDetails = () => {
   const [singleTour, setSingleTour] = useState([]);
-  console.log("okayy", singleTour);
+  
   const locations = useLocation();
   const navigate = useNavigate();
 
@@ -49,17 +49,17 @@ const TourDetails = () => {
     <Fragment>
       <Container className="mt-5 ">
         <Row>
-          <Col lg={6} md={12} sm={12}>
-            <img src={tb1} className="section-image1" />
+          <Col lg={12} md={12} sm={12}>
+            <img src={tb1} className="mb-3" />
           </Col>
-          <Col lg={6} md={12} sm={12}>
+          {/* <Col lg={6} md={12} sm={12}>
             <Row className="">
               <img src={tb2} alt="Image" className="section-image2" />
             </Row>
             <Row className="">
               <img src={tb3} alt="Image" className="section-image2" />
             </Row>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
           <Col lg={6} md={12} sm={12}>

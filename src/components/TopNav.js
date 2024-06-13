@@ -47,6 +47,7 @@ const TopNav = () => {
             <Link  className="navItem" to="/tours">Tours</Link>
             <Link  className="navItem" to="/team">Team</Link>
             <Link  className="navItem" to="/contact">Contact</Link>
+            <Link  className="navItem" to="/login">Login</Link>
            
           </Nav>
         </Navbar.Collapse>
