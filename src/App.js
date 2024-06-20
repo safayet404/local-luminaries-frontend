@@ -22,6 +22,8 @@ import CustomizeBookingPage from "./pages/CustomizeBookingPage";
 import Login from "./components/Login";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import Profile from "./components/Profile";
+import ProfilePage from "./pages/ProfilePage";
 
 function App({ props }) {
   return (
@@ -40,6 +42,7 @@ function App({ props }) {
           <Route path="/contact" element={<ContactPage />}></Route>
           <Route path="/blog" element={<BlogPage />}></Route>
           <Route path="/blog-details/:id" element={<BlogDetailsPage />}></Route>
+          <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/signup" element={<SignupPage />}></Route>
           

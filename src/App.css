@@ -6,6 +6,7 @@
 @import url('./styles/BookingModule.css');
 @import url('./styles/ContactModule.css');
 @import url('./styles/LoginModule.css');
+@import url('./styles/ProfileModule.css');
 @import url('./styles/Responsive.css');
 
 body{

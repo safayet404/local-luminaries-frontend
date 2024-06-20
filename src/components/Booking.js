@@ -35,6 +35,8 @@ let customizeSchema = Yup.object().shape({
 const Booking = () => {
   const [singleTour, setSingleTour] = useState([]);
   const locations = useLocation();
+  const userData =  JSON.parse(localStorage.getItem("user"));
+  console.log("user data  : ",userData);
   const id = locations.pathname.split("/")[2];
   useEffect(() => {
     const fetchData = async () => {
@@ -86,6 +88,7 @@ const Booking = () => {
         city: "",
         postCode: "",
       },
+      userId : userData._id || "",
       tourId : singleTour._id || "",
       person : quantity || "",
       price : singleTour.price || "",
