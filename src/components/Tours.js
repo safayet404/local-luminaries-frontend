@@ -17,15 +17,16 @@ import { HashLink } from "react-router-hash-link";
 
 import axios from "axios";
 import { base_url } from "../utils/base_url";
+import ChangeDateFormat from "./ChangeDateFormat";
 
 const Tours = () => {
   const [tourItem, setTourItem] = useState([]);
-  console.log("getting from tourItem", tourItem);
+
 
   useEffect(() => {
     axios
       .get(`${base_url}tour/all-tour`)
-      .then((response) => {
+      .then((response) => { 
         setTourItem(response.data);
       })
       .catch((error) => {
@@ -47,6 +48,19 @@ const Tours = () => {
                       <h4 className="mt-2 text-xl font-semibold">
                         {item.title}
                       </h4>
+                      
+                      <div className="d-flex justify-content-between">
+                        <p>Date : </p>
+                        <h5 className="flex">
+                          {ChangeDateFormat(item.date)}{" "}
+                        </h5>
+                      </div>
+                      <div className="d-flex justify-content-between">
+                        <p>Duration : </p>
+                        <h5 className="flex">
+                          {item.duration}{" "}
+                        </h5>
+                      </div>
                       <div className="d-flex justify-content-between">
                         <p>Starting from </p>
                         <h5 className="flex">
@@ -58,7 +72,7 @@ const Tours = () => {
                         to={`/details/${item._id}#top`}
                         className="tourCardLink mb-2"
                       >
-                        <Button className="btn-warning mb-2">Details</Button>
+                        <Button className="btn-warning mb-4">Details</Button>
                       </HashLink>
                     </div>
                   </div>
