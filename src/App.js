@@ -24,7 +24,6 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import Profile from "./components/Profile";
 import ProfilePage from "./pages/ProfilePage";
-
 function App({ props }) {
   return (
     <div>
