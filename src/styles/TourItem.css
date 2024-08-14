@@ -16,6 +16,21 @@
   
     border-radius: 2px !important;
   }
+
+  .tourCard h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .tourCard p {
+    font-size: 0.875rem;
+  }
+  
+  .tourCard h5 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
   
 .tourCardLink {
    
@@ -33,10 +48,7 @@
     padding: 2px 16px !important;
   }
 
-  .section-image1{
-    height: 500px !important;
-    width: 600px !important;
-  }
+
   .section-image2{
     height: 240px !important;
     width: 600px !important;

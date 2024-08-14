@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+
 import tb1 from "../images/feature-thumb-0.jpg";
 import tb2 from "../images/feature-thumb-1.jpg";
 import tb3 from "../images/feature-thumb-2.jpg";
@@ -7,6 +8,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { GiDuration } from "react-icons/gi";
 import { IoTime } from "react-icons/io5";
 import { FaMobile } from "react-icons/fa";
+import { TbCurrencyTaka } from "react-icons/tb";
 import { TbWorldPin } from "react-icons/tb";
 import {
   Accordion,
@@ -17,39 +19,55 @@ import {
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
-import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-const TourDetails = () => {
-  const locations = useLocation()
 
-  const id = locations.pathname.split("/")[1]
-  console.log(id)
+import { Link, useLocation,useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import axios from "axios";
+import { base_url } from "../utils/base_url";
+
+const TourDetails = () => {
+  const [singleTour, setSingleTour] = useState([]);
+  
+  const locations = useLocation();
+  const navigate = useNavigate();
+
+  const id = locations.pathname.split("/")[2];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${base_url}tour/single-tour/${id}`);
+        setSingleTour(response.data);
+      } catch (error) {
+        console.error("Something went wrong", error);
+      }
+    };
+    fetchData();
+  }, [id]);
+
+
   return (
     <Fragment>
       <Container className="mt-5 ">
         <Row>
-          <Col lg={6} md={12} sm={12}>
-            <img src={tb1} className="section-image1" />
+          <Col lg={12} md={12} sm={12}>
+            <img src={tb1} className="mb-3" />
           </Col>
-          <Col lg={6} md={12} sm={12}>
+          {/* <Col lg={6} md={12} sm={12}>
             <Row className="">
               <img src={tb2} alt="Image" className="section-image2" />
             </Row>
             <Row className="">
               <img src={tb3} alt="Image" className="section-image2" />
             </Row>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
           <Col lg={6} md={12} sm={12}>
             <h4 className="tdAbout">About</h4>
-            <p className="tdAboutDetails">
-              About Explore the chaos of old dhaka with the expertise from our
-              guides. We will be visiting Dhaka's oldest buildings dating back
-              to the mughal period. Taste old dhaka food which will leave you
-              with a craving back to bangladesh. We will be visiting everypoint
-              with a rickshaw an at the end a boat ride to the pink palace.
-            </p>
+            <p
+              className="tdAboutDetails"
+              dangerouslySetInnerHTML={{ __html: singleTour.description }}
+            ></p>
             <hr />
             <div>
               <ul className="padding-zero">
@@ -290,17 +308,24 @@ const TourDetails = () => {
 
               <Row>
                 <Col lg={8}>
-                  <h2 className="priceTag">5999 TAKA</h2>
+                  <h2 className="priceTag">
+                    {singleTour.price} <TbCurrencyTaka />
+                  </h2>
                   <p>per adult (price varies by group size)</p>
                 </Col>
                 <Col lg={4}>
-                 
-                  <Button variant="warning" className="btn-align">
-                    <HashLink  smooth className="link-decoration" to="/booking#top">Book Now</HashLink>
-                   
-                
-                    
-                  </Button>
+                <Button variant="warning" className="btn-align" >
+                      <HashLink
+                        smooth
+                        className="link-decoration"
+                        
+                        to={`/booking/${singleTour._id}#top`}
+                        
+                        
+                      >
+                        Book Now
+                      </HashLink>
+                    </Button>
                 </Col>
                 <hr className="mt-3" />
                 <div>

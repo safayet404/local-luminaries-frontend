@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const Activity = ({actData}) => {
   return (
     <Fragment>
-      <Container className="text-center">
+      <Container>
         <h2 className="activitiyHeader mb-4">Activities</h2>
         <Row  className="">
         {actData.map((data, index) => (

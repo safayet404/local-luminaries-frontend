@@ -124,7 +124,6 @@
 }
 
 .activitiyHeader {
-  text-align: center;
 
   margin-top: 20px;
   text-transform: uppercase;
@@ -135,7 +134,7 @@
 .activities {
   display: flex;
   justify-content: space-between;
-  align-items: center !important;
+ 
   padding: 0px 100px 0px 100px !important;
   margin-top: 50px !important;
 
@@ -143,7 +142,7 @@
 }
 
 .ActCard {
-  text-align: left;
+  
   color: white;
   padding: 20px;
   background-color: #FCFBFC;
@@ -168,6 +167,7 @@
     "Helvetica Neue"
     Helvetica Arial sans-serif;
   margin-top: 9px;
+  text-align: left !important;
 }
 
 .ActCard p {
@@ -298,8 +298,8 @@
 }
 
 .big-blog-image{
-  height: 145px;
-  width: 150px;
+  height: 145px !important;
+  width: 150px !important;
 }
 .footerBackground {
   background-color: #2485B0;

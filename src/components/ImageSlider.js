@@ -3,7 +3,8 @@ import { CiTwitter, CiFacebook, CiInstagram } from "react-icons/ci";
 const ImageSlider = ({slides}) => {
   return (
    <Carousel withoutControls
-   wrapAround
+   wrapAround autoplay
+   autoplayInterval={3000}
   >
     {slides.map((slide,index)=>(
      <div key={index} className="slide">

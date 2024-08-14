@@ -56,7 +56,7 @@ const slides = [
     desc: "A more rewarding way to travel",
   },
   {
-    image: B18,
+    image: B16,
     text: "Find your passion",
     desc: "escape life for a little while",
   },
@@ -66,17 +66,17 @@ const slides = [
     desc: "The real adventure is out there",
   },
   {
-    image: B9,
+    image: B15,
     text: "Be an adventurer",
     desc: "collecting memories every time",
   },
   {
-    image: B19,
+    image: B25,
     text: "Be an adventurer",
     desc: "collecting memories every time",
   },
   {
-    image: B20,
+    image: B13,
     text: "Be an adventurer",
     desc: "collecting memories every time",
   },

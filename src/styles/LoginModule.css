@@ -1,0 +1,120 @@
+.login-card {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    margin: 30px auto;
+  }
+  
+  .login-wrapper form .form-control {
+    background-color: #F5F5F7;
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    border-color: transparent;
+    margin-bottom: 19px !important;
+  
+  }
+
+  .background-color{
+    background-color: #F5F5F7;
+  }
+  
+  
+  .login-card a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-1c1c1b);
+  }
+  .login-card .signup {
+    background-color: #F5F5F7;
+  }
+  .login-card .signup:hover {
+    background-color: #F5F5F7;
+    color: white;
+  }
+
+  .forget-password-text{
+    text-decoration: none !important;
+    font-weight: 600 !important;
+  }
+  
+  .forget-password-wrapper p,h3{
+    color: #F5F5F7;
+    text-align: center;
+  }
+  
+  .forget-password-card {
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 5px;
+  }
+  .forget-password-wrapper form .form-control {
+    background-color: var(--color-f5f5f7);
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    border-color: transparent;
+  
+  }
+  .forget-password-card a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-1c1c1b);
+  }
+  
+  .signup-card {
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 5px;
+  }
+  .signup-card form .form-control {
+    background-color: #F5F5F7;
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom : 19px !important;
+    border-color: transparent;
+  
+  }
+  .signup-card h3 {
+    color: var(--color-777777);
+    text-align: center;
+  }
+  .reset-password-card {
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 5px;
+  }
+  .reset-password-card form .form-control {
+    background-color: var(--color-f5f5f7);
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    border-color: transparent;
+  
+  }
+  .reset-password-card h5 {
+    color: var(--color-777777);
+    text-align: center;
+  }
+  .buttonCSS {
+    background-color: #232F3E;
+    color: white !important;
+    padding: 13px 33px;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    border-radius: 25px;
+    text-decoration: none !important;
+    margin : 5px !important;
+  }
+  
+.error{
+  color: red;
+  margin-bottom: 10px !important;
+}

@@ -1,7 +1,7 @@
 
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/Untitled(1).png"
-
+import { CgProfile } from "react-icons/cg";
 import { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -47,6 +47,8 @@ const TopNav = () => {
             <Link  className="navItem" to="/tours">Tours</Link>
             <Link  className="navItem" to="/team">Team</Link>
             <Link  className="navItem" to="/contact">Contact</Link>
+            <Link  className="navItem" to="/profile"><CgProfile/> </Link>
+           
            
           </Nav>
         </Navbar.Collapse>
