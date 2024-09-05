@@ -17,12 +17,9 @@ import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 import Footer from "./components/Footer";
-import CustomizeBooking from "./components/CustomizeBooking";
 import CustomizeBookingPage from "./pages/CustomizeBookingPage";
-import Login from "./components/Login";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import Profile from "./components/Profile";
 import ProfilePage from "./pages/ProfilePage";
 function App({ props }) {
   return (
