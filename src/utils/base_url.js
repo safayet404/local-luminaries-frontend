@@ -1,1 +1,1 @@
-export const base_url = "http://local-luminaries-backend/api/"
+export const base_url = "https://local-luminaries-backend.vercel.app/api/"
