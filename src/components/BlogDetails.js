@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Spinner, Col, Container, Row } from "react-bootstrap";
 import tb1 from "../images/feature-thumb-0.jpg";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
@@ -8,6 +8,7 @@ import { base_url } from "../utils/base_url";
 const BlogDetails = () => {
 
   const [singleBlog,setSingleBlog] = useState([])
+  const [loading, setLoading] = useState(true);
 
   const splitTitle = (str, num) => {
     if (str.length <= num) {
@@ -22,9 +23,11 @@ const BlogDetails = () => {
     axios.get(`${base_url}blog/single-blog/${blogId}`)
     .then((response)=>{
       setSingleBlog(response.data)
+      setLoading(false);
     })
     .catch((error)=>{
       console.error("there was an error !",error)
+      setLoading(false);
     })
 
   },[blogId])
@@ -32,12 +35,19 @@ const BlogDetails = () => {
   return (
     <Fragment>
       <Container className="mt-5">
-        <Row>
-          <Col lg={12} md={12} sm={12} className="d-flex justify-content-center mb-4">
-            <img src={singleBlog.image} className="section-image1" />
-          </Col>
-          
-        </Row>
+
+        {loading ? (<div className="d-flex justify-content-center align-items-center" style={{ minHeight: "50vh" }}>
+            <Spinner animation="border" variant="primary" />
+          </div>) : (
+              <Row>
+              <Col lg={12} md={12} sm={12} className="d-flex justify-content-center mb-4">
+                <img src={singleBlog.image} className="section-image1" />
+              </Col>
+              
+            </Row>
+          )}
+
+      
 
         <Row>
           <Col>

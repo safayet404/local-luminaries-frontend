@@ -49,8 +49,8 @@ const TourDetails = () => {
     <Fragment>
       <Container className="mt-5 ">
         <Row>
-          <Col lg={12} md={12} sm={12}>
-            <img src={tb1} className="mb-3" />
+          <Col className="text-center" lg={12} md={12} sm={12}>
+            <img src={singleTour.image} className="mb-3" />
           </Col>
           {/* <Col lg={6} md={12} sm={12}>
             <Row className="">

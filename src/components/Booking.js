@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Button, Col, Container, Form, Row, Table } from "react-bootstrap";
-import thumb from "../images/activities-10.jpg";
+import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import CustomInput from "./CustomInput";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -22,23 +21,31 @@ let customizeSchema = Yup.object().shape({
     city: Yup.string().required("City/Town is required"),
     postCode: Yup.string().required("Post Code is required"),
   }),
-      tourId : Yup.string().required("House Number is required"),
-      person : Yup.string().required("House Number is required"),
-      price : Yup.number().required("House Number is required"),
-      totalAmount : Yup.number().required("House Number is required"),
-      paidAmount : Yup.number().required("House Number is required"),
-      dueAmount :Yup.number().required("House Number is required")
-
+  tourId: Yup.string().required("Tour ID is required"),
+  person: Yup.string().required("Number of guests is required"),
+  price: Yup.number().required("Price is required"),
+  totalAmount: Yup.number().required("Total Amount is required"),
+  paidAmount: Yup.number().required("Paid Amount is required"),
+  dueAmount: Yup.number().required("Due Amount is required"),
 });
-
 
 const Booking = () => {
   const [singleTour, setSingleTour] = useState([]);
-  const locations = useLocation();
-  const userData =  JSON.parse(localStorage.getItem("user"));
-  console.log("user data  : ",userData);
-  const id = locations.pathname.split("/")[2];
+  const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const userData = JSON.parse(localStorage.getItem("user"));
+  
+  const id = location.pathname.split("/")[2];
+
   useEffect(() => {
+    if (!userData) {
+      navigate("/login");
+      return;
+    }
+
     const fetchData = async () => {
       try {
         const response = await axios.get(`${base_url}tour/single-tour/${id}`);
@@ -48,11 +55,9 @@ const Booking = () => {
       }
     };
     fetchData();
-  }, [id]);
-  
+  }, [id, userData, navigate]);
+
   const pricePerUnit = singleTour.price;
-  const [quantity, setQuantity] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0);
 
   const calculateTotalPrice = () => {
     const parsedQuantity = parseInt(quantity);
@@ -80,43 +85,42 @@ const Booking = () => {
       firstName: "",
       lastName: "",
       email: "",
-      mobile : "",
-      
+      mobile: "",
       address: {
         house: "",
         road: "",
         city: "",
         postCode: "",
       },
-      userId : userData._id || "",
-      tourId : singleTour._id || "",
-      person : quantity || "",
-      price : singleTour.price || "",
-      totalAmount : totalPrice || "",
-      paidAmount : quantity|| "",
-      dueAmount : totalPrice || ""
+      userId: userData ? userData._id : "",
+      tourId: singleTour._id || "",
+      person: quantity || "",
+      price: singleTour.price || "",
+      totalAmount: totalPrice || "",
+      paidAmount: 0,
+      dueAmount: totalPrice || "",
     },
     validationSchema: customizeSchema,
     onSubmit: async (values) => {
       alert(JSON.stringify(values));
-      try{
-        const response = await axios.post(`${base_url}order/create-order`,values)
-        if(response.status === 200)
-          {
-           
-            toast.success("Order Place Successfully!")
-          }
-
-      }catch(error)
-      {
-        console.log("Error submitting booking")
+      try {
+        const response = await axios.post(`${base_url}order/create-order`, values);
+        if (response.status === 200) {
+          toast.success("Order Placed Successfully!");
+          navigate("/profile");
+        }
+      } catch (error) {
+        console.log("Error submitting booking");
       }
-      setQuantity(1)
-
-      formik.resetForm()
-      
+      setQuantity(1);
+      formik.resetForm();
     },
   });
+
+  // Prevent rendering if user is not logged in.
+  if (!userData) {
+    return null;
+  }
 
   return (
     <Fragment>
@@ -149,7 +153,6 @@ const Booking = () => {
                     </div>
                   </div>
                 </div>
-                
               </Col>
 
               <Col lg={3}>
@@ -166,8 +169,7 @@ const Booking = () => {
 
             <div className="row">
               <div className="col-6">
-             
-              <CustomInput 
+                <CustomInput 
                   className="bookingForm"
                   type="text"
                   name="firstName"
@@ -261,21 +263,23 @@ const Booking = () => {
                   </tr>
                   <tr>
                     <td>
-                      <span className="booking-heading">Total Due</span>{" "}
+                      <span className="booking-heading">Total Amount</span>{" "}
                     </td>
                     <td>{totalPrice}</td>
                   </tr>
                 </tbody>
               </Table>
+              <Button type="submit" className="btn btn-primary">
+                Place Order
+              </Button>
             </div>
-
-            <p> Payment on Cash </p>
-            <Button type="submit"  variant="success">Place Order</Button>
           </div>
         </form>
       </Container>
     </Fragment>
   );
 };
+
+
 
 export default Booking;
