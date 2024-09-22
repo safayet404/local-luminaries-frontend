@@ -21,6 +21,14 @@
     color: white !important;
     margin: 10px !important;
 }
+.navItem1{
+    text-decoration: none !important;
+    text-transform: uppercase;
+    padding: 0px !important;
+    color: white !important;
+    
+    font-size: xx-large !important;
+}
 
 .navBackground{
     background-color : #2485B0 !important;

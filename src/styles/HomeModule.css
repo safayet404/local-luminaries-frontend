@@ -190,6 +190,14 @@
   position: relative;
 }
 
+.destName {
+ 
+  padding: 5px 30px 5px 30px !important;
+  background-color: #2485B0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .destContent {
   position: absolute;
   background-color: aqua;

@@ -47,7 +47,7 @@ const TopNav = () => {
             <Link  className="navItem" to="/tours">Tours</Link>
             <Link  className="navItem" to="/team">Team</Link>
             <Link  className="navItem" to="/contact">Contact</Link>
-            <Link  className="navItem" to="/profile"><CgProfile/> </Link>
+            <Link  className="navItem1" to="/profile"><CgProfile/> </Link>
            
            
           </Nav>

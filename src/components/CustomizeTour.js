@@ -43,7 +43,6 @@ const CustomizeTour = () => {
   useEffect(()=>{
     axios.get(`${base_url}destination/all-destination`)
     .then(response =>{
-      console.log(response.data)
       setDestinations(response.data)
     })
     .catch(error=>{

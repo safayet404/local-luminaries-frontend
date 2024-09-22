@@ -14,7 +14,7 @@ import ChangeDateFormat from "./ChangeDateFormat";
 
 const Tours = () => {
   const [tourItem, setTourItem] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -34,7 +34,7 @@ const Tours = () => {
       <Container className="topMargin">
         <h1 className="text-center mt-5">Tour List</h1>
 
-        {/* Loader animation */}
+
         {loading ? (
           <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '50vh' }}>
             <Spinner animation="border" variant="primary" /> {/* Bootstrap Spinner */}
