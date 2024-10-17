@@ -55,7 +55,7 @@ const Booking = () => {
       }
     };
     fetchData();
-  }, [id, userData, navigate]);
+  }, []);
 
   const pricePerUnit = singleTour.price;
 
@@ -102,7 +102,7 @@ const Booking = () => {
     },
     validationSchema: customizeSchema,
     onSubmit: async (values) => {
-      alert(JSON.stringify(values));
+     
       try {
         const response = await axios.post(`${base_url}order/create-order`, values);
         if (response.status === 200) {

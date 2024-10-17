@@ -21,10 +21,12 @@ import CustomizeBookingPage from "./pages/CustomizeBookingPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import ProfilePage from "./pages/ProfilePage";
+import ScrollToTop from "./components/ScrollToTop";
 function App({ props }) {
   return (
     <div>
       <Router>
+        <ScrollToTop/>
         <TopNav />
 
         <Routes>

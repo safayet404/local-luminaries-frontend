@@ -12,14 +12,13 @@ const Profile = () => {
   const loginData = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
-  // Redirect to login if no user data
   useEffect(() => {
     if (!loginData) {
       navigate("/login");
     }
-  }, [loginData, navigate]);
+  }, [loginData, navigate]); // Depend on loginData to handle the redirect properly
 
-  // Fetch user order data
+  // Fetch user order data if loginData exists
   useEffect(() => {
     if (loginData) {
       axios
@@ -31,17 +30,15 @@ const Profile = () => {
           console.error("There was an error fetching the order data:", error);
         });
     }
-  }, [loginData]);
+  }, []);
 
-  // Logout handler
   const logoutHandler = () => {
     localStorage.removeItem("user");
     navigate("/login");
   };
 
-  // Return null or redirect to login if no user data
   if (!loginData) {
-    return null; // You could also navigate to the login page here
+    return null; // or some loading state or redirect logic if needed
   }
 
   return (
@@ -90,20 +87,18 @@ const Profile = () => {
                     <div className="mt-2 mb-2">
                       <img
                         className="thumbnail-img"
-                        src={item.tourId?.image}
+                        src={item.tourId.image || "default-image-url"} // Fallback for missing image
                         alt="thumbnail"
                       />
                     </div>
                     <div className="mt-4">
                       <h4 className="booking-heading">
-                        Date: {ChangeDateFormat(item.tourId?.date)}
+                        Date: {item.tourId.date ? ChangeDateFormat(item.tourId.date) : "N/A"}
                       </h4>
-                      <h4 className="booking-heading">{item.tourId?.title}</h4>
+                      <h4 className="booking-heading">{item.tourId.title || "N/A"}</h4>
+                      <h4 className="booking-heading">Guest: {item.person}</h4>
                       <h4 className="booking-heading">
-                        Guest: {item.person}
-                      </h4>
-                      <h4 className="booking-heading">
-                        Duration: {item.tourId?.duration}
+                        Duration: {item.tourId.duration || "N/A"}
                       </h4>
                       <h4 className="booking-heading">
                         Amount: {item.totalAmount} <TbCurrencyTaka />
