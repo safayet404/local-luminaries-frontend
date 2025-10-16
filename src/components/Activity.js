@@ -5,7 +5,7 @@ const Activity = ({actData}) => {
   return (
     <Fragment>
       <Container>
-        <h2 className="activitiyHeader mb-4">Activities</h2>
+        <h2 className="activitiyHeader mb-4">Activity</h2>
         <Row  className="">
         {actData.map((data, index) => (
           <Col key={index}  lg={3} md={6} sm={12}>
