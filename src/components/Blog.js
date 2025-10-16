@@ -34,7 +34,7 @@ const Blog = () => {
         <h1 className="destHeading">Our Blogs</h1>
         <p className="destSubHeading text-center">
           We keep you informed of the latest news from the vacation world,
-          subscribe to our blog and find out everything.
+          Subscribe to our blog and find out everything.
         </p>
 
       
