@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="d-flex flex-column align-items-center mt-4 mb-4">
               <SlLocationPin className="contactIcons" />
 
-              <p>153, Primary School ,Dakshinkhan </p>
+              <p>House :153, Primary School ,Dakshinkhan </p>
               <p>Dhaka,Bangladesh</p>
             </div>
           </Col>
